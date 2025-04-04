@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Avancée Pas Disponible</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #1c1c1c, #333, #555, #777);
+            background-size: 400% 400%;
+            animation: gradientBackground 8s infinite;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .message {
+            font-size: 3em;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            animation: slideIn 2s infinite alternate, colorChange 3s infinite;
+        }
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        @keyframes colorChange {
+            0% {
+                color: #ff0000;
+            }
+            33% {
+                color: #00ff00;
+            }
+            66% {
+                color: #0000ff;
+            }
+            100% {
+                color: #ffff00;
+            }
+        }
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message">Pas disponible</div>
+</body>
+</html>
